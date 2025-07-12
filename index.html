@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MediBrain</title>
+</head>
+
+<body>
+  <header>
+    <img src="./assets/logo.png" alt="Logo da MediBrain">
+  </header>
+
+  <main>
+    <section>
+      <div class="assistenteIa">
+        <h1>MediBrain - Seu assistente de Saúde IA</h1>
+        <form id="form">
+          <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini">
+
+          <select id="problemSelect">
+            <option value="">Selecione o seu problema</option>
+            <option value="infoSaude">Informações sobre saúde</option>
+            <option value="infoDores">Informações sobre dores</option>
+            <option value="infoSintomas">Informações sobre sintomas</option>
+            <option value="infoRemedios">Informações sobre remédios</option>
+            <option value="infoGeral">Informações gerais</option>
+          </select>
+
+          <input class="questionInput" id="questionInput" type="text" placeholder="Ex: Remédio indicado para dores musculares ...">
+
+          <button id="askButton">
+            Perguntar
+          </button>
+        </form>
+
+        <div id="aiResponse" class="hidden">
+          <div class="response-content">
+
+          </div>
+        </div>
+
+    </section>
+
+    <section>
+      <div id="sobre" class="sobre">
+        <h2>Sobre</h2>
+        <p>Esse é um projeto pensado em ajudar pessoas a terem uma vida mais saudável com a ajuda da IA. O que você quiser saber sobre sua sáude e informações de remédios, dores, sintomas de doenças e mal-estar, você pode perguntar para o assistente. <strong>IMPORTANTE</strong>, isso é uma Inteligência Artificial, então se estiver com dores, mal-estar ou sintomas de alguma doença o mais recomendado é procurar ajuda médica.</p>
+      </div>
+    </section>
+  </main>
+  
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

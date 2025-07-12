@@ -1,0 +1,169 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+header img {
+  width: 15rem;
+}
+
+main {
+  max-width: 32rem;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.assistenteIa {
+  background-color: #6B8EBF;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+}
+
+input, select {
+  all: unset;
+  border: 3px solid #8DD1AE;
+  border-radius: 6px;
+  padding: 0.675rem;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background-color: #1A291F;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  background-color: #FFD7A3;
+  padding: 0.675rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12px;
+  transition: all 0.3s;
+  color: #333333;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 1rem #8DD1AE;
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  cursor: not-allowed;
+  color: #000;
+}
+
+#aiResponse {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: solid 4px #43E7AD;
+}
+
+#aiResponse ul {
+  padding-left: 1.5rem;
+  opacity: 0.8;
+}
+
+#aiResponse p {
+  color: #fff;
+}
+
+.loading {
+  animation: pulse 1s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+.sobre {
+  margin-top: 5rem;
+  background-color: #6B8EBF;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 32px;
+}
+
+.sobre p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.sobre strong {
+  color: #333333;
+}
+
+footer {
+  background-color: #333333;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+footer h2 {
+  font-size: 30px;
+}
+
+footer a {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+/* Animações */
+
+main section {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
